@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peixes — Uma Viagem pelo Mundo Aquático</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="bubbles-container" aria-hidden="true"></div>
+<div id="progress-bar"></div>
+
+<div id="controls-fixed">
+  <button id="toggle-anim-btn" class="ctrl-btn" title="Ativar/Desativar animações">✨</button>
+  <button id="presentation-btn" class="ctrl-btn" title="Modo Apresentação">🖥️</button>
+  <button id="fullscreen-btn" class="ctrl-btn" title="Tela Cheia">⛶</button>
+</div>
+
+<button id="back-to-top" class="ctrl-btn" title="Voltar ao topo">↑</button>
+
+<nav id="main-nav">
+  <div class="nav-inner">
+    <span class="nav-logo">🐟 PEIXES</span>
+    <button id="nav-toggle" aria-label="Abrir menu">☰</button>
+    <ul id="nav-list">
+      <li><a href="#inicio" class="nav-link active">Início</a></li>
+      <li><a href="#caracteristicas" class="nav-link">Características</a></li>
+      <li><a href="#anatomia" class="nav-link">Anatomia</a></li>
+      <li><a href="#classificacao" class="nav-link">Classificação</a></li>
+      <li><a href="#adaptacoes" class="nav-link">Adaptações</a></li>
+      <li><a href="#alimentacao" class="nav-link">Alimentação</a></li>
+      <li><a href="#reproducao" class="nav-link">Reprodução</a></li>
+      <li><a href="#ecologia" class="nav-link">Ecologia</a></li>
+      <li><a href="#curiosidades" class="nav-link">Curiosidades</a></li>
+      <li><a href="#quiz" class="nav-link">Quiz</a></li>
+      <li><a href="#equipe" class="nav-link">Equipe</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="inicio" class="section hero-section">
+  <div class="ocean-layer"></div>
+  <div class="fish-decor fish1">🐟</div>
+  <div class="fish-decor fish2">🐠</div>
+  <div class="fish-decor fish3">🐡</div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Trabalho de Biologia</p>
+    <h1 class="hero-title">PEIXES</h1>
+    <p class="hero-subtitle">Uma viagem pelo mundo aquático</p>
+    <div class="hero-team">
+      <span>Diego</span><span>•</span><span>Iago</span><span>•</span><span>Pedro Martins</span><span>•</span><span>Américo</span><span>•</span><span>Arthur Breno</span><span>•</span><span>Arthur</span>
+    </div>
+    <button id="explore-btn" class="btn-main">EXPLORAR O MUNDO DOS PEIXES</button>
+  </div>
+  <div class="scroll-hint">role para explorar ↓</div>
+</section>
+
+<!-- CARACTERISTICAS -->
+<section id="caracteristicas" class="section">
+  <h2 class="section-title">O que são os peixes?</h2>
+  <p class="section-intro">Os peixes são animais vertebrados aquáticos, adaptados a viver totalmente dentro da água. Formam o grupo de vertebrados mais diverso do planeta.</p>
+
+  <div class="cards-grid">
+    <div class="glass-card flip-card" tabindex="0">
+      <h3>🌊 Habitat</h3>
+      <p>Vivem em água doce, salgada ou salobra — rios, lagos, mares e oceanos.</p>
+    </div>
+    <div class="glass-card flip-card" tabindex="0">
+      <h3>💨 Respiração</h3>
+      <p>A maioria respira por brânquias, retirando o oxigênio dissolvido na água.</p>
+    </div>
+    <div class="glass-card flip-card" tabindex="0">
+      <h3>🏊 Locomoção</h3>
+      <p>Se deslocam usando nadadeiras e movimentos ondulatórios do corpo.</p>
+    </div>
+    <div class="glass-card flip-card" tabindex="0">
+      <h3>🌡️ Ectotermia</h3>
+      <p>São ectotérmicos: a temperatura do corpo varia conforme o ambiente.</p>
+    </div>
+  </div>
+
+  <div class="counters-row">
+    <div class="counter-box"><span class="counter" data-target="34000">0</span><p>espécies conhecidas</p></div>
+    <div class="counter-box"><span class="counter" data-target="15000">0</span><p>espécies de água doce</p></div>
+    <div class="counter-box"><span class="counter" data-target="500">0</span><p>milhões de anos de evolução</p></div>
+  </div>
+
+  <div class="clickable-fish-intro">
+    <p class="hint-text">👆 Clique nos pontos do peixe abaixo para saber mais (veja a seção Anatomia completa mais adiante)</p>
+  </div>
+</section>
+
+<!-- ANATOMIA -->
+<section id="anatomia" class="section alt-bg">
+  <h2 class="section-title">Anatomia Interativa</h2>
+  <p class="section-intro">Clique nos pontos para conhecer cada parte do peixe.</p>
+
+  <div class="anatomy-layout">
+
+    <div class="anatomy-wrapper">
+      <svg viewBox="0 0 820 380" class="fish-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#5fd4ff"/>
+            <stop offset="55%" stop-color="#22b8e8"/>
+            <stop offset="100%" stop-color="#0e7fb8"/>
+          </linearGradient>
+          <linearGradient id="finGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7fe3ff"/>
+            <stop offset="100%" stop-color="#0ea5e9"/>
+          </linearGradient>
+          <pattern id="scalePattern" width="26" height="18" patternUnits="userSpaceOnUse" patternTransform="translate(0,0)">
+            <path d="M0,18 C0,8 8,0 13,0 C18,0 26,8 26,18 C20,13 6,13 0,18 Z" fill="none" stroke="#083a54" stroke-width="1.4" opacity="0.55"/>
+          </pattern>
+          <filter id="glowFilter" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- CORPO -->
+        <path class="anat-part anat-body" d="M130,192
+          C 150,132 225,98 330,94
+          C 445,90 560,112 648,158
+          C 660,166 668,178 668,192
+          C 668,206 660,218 648,226
+          C 560,272 445,294 330,290
+          C 225,286 150,252 130,192 Z"
+          fill="url(#bodyGrad)" stroke="#083a54" stroke-width="3"/>
+
+        <!-- ESCAMAS (padrão sobre a região média/traseira do corpo) -->
+        <path class="anat-part anat-escamas" d="M290,110
+          C 400,100 540,118 630,160
+          C 645,170 652,182 652,192
+          C 652,204 645,214 630,224
+          C 540,266 400,284 290,274
+          C 340,192 340,192 290,110 Z"
+          fill="url(#scalePattern)" stroke="none"/>
+
+        <!-- LINHA LATERAL -->
+        <path class="anat-part anat-linhalateral" d="M215,193 C 320,183 480,183 630,192"
+          fill="none" stroke="#fef08a" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/>
+
+        <!-- OPÉRCULO / BRÂNQUIAS -->
+        <g class="anat-part anat-branquias">
+          <path d="M196,132 C 226,150 230,236 196,254 C 214,218 214,168 196,132 Z" fill="#0b6b96" stroke="#083a54" stroke-width="2.5"/>
+          <path d="M206,150 C 214,170 214,214 206,236" fill="none" stroke="#052e42" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+          <path d="M216,156 C 224,174 224,210 216,228" fill="none" stroke="#052e42" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+        </g>
+
+        <!-- NADADEIRA DORSAL -->
+        <path class="anat-part anat-dorsal" d="M338,98
+          C 358,42 408,14 456,10
+          C 472,40 476,72 470,108
+          C 424,92 380,90 338,98 Z"
+          fill="url(#finGrad)" stroke="#083a54" stroke-width="2.5"/>
+
+        <!-- NADADEIRA CAUDAL (cauda) -->
+        <path class="anat-part anat-caudal" d="M655,192
+          C 678,140 726,104 800,80
+          C 762,138 748,168 746,192
+          C 748,216 762,246 800,304
+          C 726,280 678,244 655,192 Z"
+          fill="url(#finGrad)" stroke="#083a54" stroke-width="2.5"/>
+
+        <!-- NADADEIRAS PEITORAIS -->
+        <path class="anat-part anat-peitorais" d="M244,208
+          C 268,224 284,254 268,290
+          C 232,276 208,244 214,208
+          C 224,204 234,204 244,208 Z"
+          fill="url(#finGrad)" stroke="#083a54" stroke-width="2.5" opacity="0.95"/>
+
+        <!-- NADADEIRAS PÉLVICAS -->
+        <path class="anat-part anat-pelvicas" d="M372,262
+          C 392,276 404,298 392,324
+          C 364,314 346,288 352,262
+          C 358,258 366,258 372,262 Z"
+          fill="url(#finGrad)" stroke="#083a54" stroke-width="2.5" opacity="0.9"/>
+
+        <!-- BOCA -->
+        <path class="anat-part anat-boca" d="M118,186 C 128,178 146,178 156,188 C 146,200 126,200 118,186 Z"
+          fill="#052e42" stroke="#031c2e" stroke-width="1.5"/>
+
+        <!-- OLHO -->
+        <g class="anat-part anat-olhos">
+          <circle cx="172" cy="152" r="19" fill="#f8fdff" stroke="#083a54" stroke-width="2.5"/>
+          <circle cx="172" cy="152" r="9" fill="#04202f"/>
+          <circle cx="176" cy="148" r="3" fill="#ffffff"/>
+        </g>
+
+        <!-- PONTOS NUMERADOS -->
+        <g class="hotspot" data-info="branquias" tabindex="0">
+          <circle cx="204" cy="192" r="16"/><text x="204" y="197">1</text>
+        </g>
+        <g class="hotspot" data-info="dorsal" tabindex="0">
+          <circle cx="406" cy="52" r="16"/><text x="406" y="57">2</text>
+        </g>
+        <g class="hotspot" data-info="caudal" tabindex="0">
+          <circle cx="726" cy="192" r="16"/><text x="726" y="197">3</text>
+        </g>
+        <g class="hotspot" data-info="peitorais" tabindex="0">
+          <circle cx="238" cy="246" r="16"/><text x="238" y="251">4</text>
+        </g>
+        <g class="hotspot" data-info="pelvicas" tabindex="0">
+          <circle cx="374" cy="288" r="16"/><text x="374" y="293">5</text>
+        </g>
+        <g class="hotspot" data-info="escamas" tabindex="0">
+          <circle cx="552" cy="150" r="16"/><text x="552" y="155">6</text>
+        </g>
+        <g class="hotspot" data-info="linhalateral" tabindex="0">
+          <circle cx="340" cy="183" r="16"/><text x="340" y="188">7</text>
+        </g>
+        <g class="hotspot" data-info="olhos" tabindex="0">
+          <circle cx="172" cy="120" r="16"/><text x="172" y="125">8</text>
+        </g>
+        <g class="hotspot" data-info="boca" tabindex="0">
+          <circle cx="112" cy="150" r="16"/><text x="112" y="155">9</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="anatomy-panel" id="anatomy-panel">
+      <span class="anatomy-panel-badge" id="anatomy-panel-badge">?</span>
+      <h3 id="anatomy-panel-title">Selecione uma parte</h3>
+      <p class="anatomy-panel-hint" id="anatomy-panel-hint">Clique em um dos números sobre o peixe para ver onde fica, como é e qual a função de cada estrutura.</p>
+      <div id="anatomy-panel-body" class="hidden">
+        <div class="anatomy-info-block">
+          <span class="anatomy-info-label">Onde fica</span>
+          <p id="anatomy-panel-onde"></p>
+        </div>
+        <div class="anatomy-info-block">
+          <span class="anatomy-info-label">Como é</span>
+          <p id="anatomy-panel-como"></p>
+        </div>
+        <div class="anatomy-info-block">
+          <span class="anatomy-info-label">Função</span>
+          <p id="anatomy-panel-funcao"></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CLASSIFICACAO -->
+<section id="classificacao" class="section">
+  <h2 class="section-title">Classificação</h2>
+  <p class="section-intro">Os peixes são divididos em três grandes grupos.</p>
+
+  <div class="cards-grid class-grid">
+    <div class="glass-card expand-card" data-group="osseos">
+      <h3>🐟 Peixes ósseos (Osteíctes)</h3>
+      <p class="preview">Esqueleto feito de osso. Maior grupo de peixes.</p>
+      <div class="expand-content">
+        <p>Possuem esqueleto ósseo, bexiga natatória e opérculo protegendo as brânquias.</p>
+        <p><strong>Exemplos:</strong> Sardinha, Tilápia, Salmão, Atum.</p>
+        <div class="example-gallery"><figure class="wiki-fig" data-wiki="Sardine"><span class="wiki-ph">🐟</span><img alt="Sardinha" decoding="async"><figcaption>Sardinha</figcaption></figure><figure class="wiki-fig" data-wiki="Nile tilapia"><span class="wiki-ph">🐟</span><img alt="Tilápia" decoding="async"><figcaption>Tilápia</figcaption></figure><figure class="wiki-fig" data-wiki="Atlantic salmon"><span class="wiki-ph">🐟</span><img alt="Salmão" decoding="async"><figcaption>Salmão</figcaption></figure><figure class="wiki-fig" data-wiki="Atlantic bluefin tuna"><span class="wiki-ph">🐟</span><img alt="Atum" decoding="async"><figcaption>Atum</figcaption></figure></div>
+      </div>
+    </div>
+    <div class="glass-card expand-card" data-group="cartilaginosos">
+      <h3>🦈 Peixes cartilaginosos (Condrictes)</h3>
+      <p class="preview">Esqueleto feito de cartilagem.</p>
+      <div class="expand-content">
+        <p>Não possuem bexiga natatória e precisam nadar continuamente para não afundar.</p>
+        <p><strong>Exemplos:</strong> Tubarão, Raia.</p>
+        <div class="example-gallery"><figure class="wiki-fig" data-wiki="Great white shark"><span class="wiki-ph">🦈</span><img alt="Tubarão" decoding="async"><figcaption>Tubarão</figcaption></figure><figure class="wiki-fig" data-wiki="Batoidea"><span class="wiki-ph">🐟</span><img alt="Raia" decoding="async"><figcaption>Raia</figcaption></figure></div>
+      </div>
+    </div>
+    <div class="glass-card expand-card" data-group="agnatos">
+      <h3>🐟 Agnatos</h3>
+      <p class="preview">Peixes sem mandíbula.</p>
+      <div class="expand-content">
+        <p>Grupo mais primitivo, com boca em forma de ventosa, sem mandíbulas verdadeiras.</p>
+        <p><strong>Exemplo:</strong> Lampreia.</p>
+        <div class="example-gallery"><figure class="wiki-fig" data-wiki="Lamprey"><span class="wiki-ph">🐟</span><img alt="Lampreia" decoding="async"><figcaption>Lampreia</figcaption></figure></div>
+      </div>
+    </div>
+  </div>
+  <p class="img-credit">Imagens: Wikipédia / Wikimedia Commons (carregadas online).</p>
+</section>
+
+<!-- ADAPTACOES -->
+<section id="adaptacoes" class="section alt-bg">
+  <h2 class="section-title">Adaptações</h2>
+  <p class="section-intro">Estruturas que permitem aos peixes viver plenamente na água.</p>
+  <div class="cards-grid" id="adaptacoes-grid"></div>
+</section>
+
+<!-- ALIMENTACAO -->
+<section id="alimentacao" class="section">
+  <h2 class="section-title">Alimentação</h2>
+  <p class="section-intro">Peixes podem ser carnívoros, herbívoros, onívoros ou detritívoros. Escolha um peixe para explorar:</p>
+  <div class="fish-selector" id="fish-selector"></div>
+  <div class="fish-info-panel" id="fish-info-panel">
+    <p class="hint-text">👆 Selecione um peixe acima</p>
+  </div>
+  <p class="img-credit">Imagens: Wikipédia / Wikimedia Commons (carregadas online).</p>
+</section>
+
+<!-- REPRODUCAO -->
+<section id="reproducao" class="section alt-bg">
+  <h2 class="section-title">Reprodução</h2>
+  <p class="section-intro">A maioria dos peixes se reproduz sexuadamente, com fecundação externa ou interna, sendo geralmente ovíparos.</p>
+  <div class="timeline">
+    <div class="timeline-step"><span class="tstep-icon">💞</span><p>Reprodução</p></div>
+    <div class="timeline-arrow">→</div>
+    <div class="timeline-step"><span class="tstep-icon">🥚</span><p>Ovos</p></div>
+    <div class="timeline-arrow">→</div>
+    <div class="timeline-step"><span class="tstep-icon">🌱</span><p>Desenvolvimento</p></div>
+    <div class="timeline-arrow">→</div>
+    <div class="timeline-step"><span class="tstep-icon">🐠</span><p>Larva / Filhote</p></div>
+    <div class="timeline-arrow">→</div>
+    <div class="timeline-step"><span class="tstep-icon">🐟</span><p>Adulto</p></div>
+  </div>
+
+  <h3 class="subhead">Como o embrião se desenvolve</h3>
+  <div class="cards-grid repro-grid">
+    <div class="glass-card repro-card">
+      <figure class="wiki-fig" data-wiki="Roe"><span class="wiki-ph">🥚</span><img alt="Ovos de peixe" decoding="async"><figcaption>Ovos de peixe</figcaption></figure>
+      <h3>Ovíparo</h3>
+      <p>Os ovos são liberados e o embrião se desenvolve fora do corpo da mãe. É o caso da maioria dos peixes, como salmão e tilápia. A fecundação costuma ser externa.</p>
+    </div>
+    <div class="glass-card repro-card">
+      <figure class="wiki-fig" data-wiki="Guppy"><span class="wiki-ph">🐠</span><img alt="Guppy (barrigudinho)" decoding="async"><figcaption>Guppy (barrigudinho)</figcaption></figure>
+      <h3>Ovovivíparo</h3>
+      <p>Os ovos se desenvolvem dentro do corpo da fêmea e os filhotes nascem já formados. A fecundação é interna, como no guppy e em vários tubarões.</p>
+    </div>
+    <div class="glass-card repro-card">
+      <figure class="wiki-fig" data-wiki="Bull shark"><span class="wiki-ph">🦈</span><img alt="Tubarão-cabeça-chata" decoding="async"><figcaption>Tubarão-cabeça-chata</figcaption></figure>
+      <h3>Vivíparo</h3>
+      <p>O embrião é nutrido pela mãe durante o desenvolvimento e os filhotes nascem prontos. Ocorre em alguns tubarões, como o tubarão-cabeça-chata.</p>
+    </div>
+  </div>
+  <p class="img-credit">Imagens: Wikipédia / Wikimedia Commons (carregadas online).</p>
+</section>
+
+<!-- ECOLOGIA -->
+<section id="ecologia" class="section">
+  <h2 class="section-title">Ecologia</h2>
+  <p class="section-intro">Peixes são fundamentais para o equilíbrio dos ecossistemas aquáticos. Clique na cadeia alimentar:</p>
+  <div class="food-chain" id="food-chain"></div>
+  <div class="fish-info-panel" id="chain-info-panel">
+    <p class="hint-text">👆 Clique em um organismo da cadeia acima</p>
+  </div>
+</section>
+
+<!-- CURIOSIDADES -->
+<section id="curiosidades" class="section alt-bg">
+  <h2 class="section-title">Curiosidades</h2>
+  <div class="cards-grid" id="curiosidades-grid"></div>
+  <button id="random-curiosity-btn" class="btn-main">DESCUBRA UMA CURIOSIDADE</button>
+  <p class="img-credit">Imagens: Wikipédia / Wikimedia Commons (carregadas online).</p>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="section">
+  <h2 class="section-title">Quiz Interativo</h2>
+  <div id="quiz-container">
+    <div id="quiz-start">
+      <p class="section-intro">10 perguntas sobre a biologia dos peixes. Vamos testar seu conhecimento?</p>
+      <button id="start-quiz-btn" class="btn-main">COMEÇAR QUIZ</button>
+    </div>
+    <div id="quiz-play" class="hidden">
+      <div class="quiz-progress"><div id="quiz-progress-fill"></div></div>
+      <p id="quiz-counter"></p>
+      <h3 id="quiz-question"></h3>
+      <div id="quiz-options"></div>
+      <div id="quiz-feedback" class="hidden"></div>
+    </div>
+    <div id="quiz-result" class="hidden">
+      <h3 id="quiz-score"></h3>
+      <p id="quiz-message"></p>
+      <button id="restart-quiz-btn" class="btn-main">JOGAR NOVAMENTE</button>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2 class="section-title small">Desafio Relâmpago — Verdadeiro ou Falso</h2>
+  <div id="tf-container">
+    <p class="quiz-progress-text" id="tf-counter"></p>
+    <h3 id="tf-statement"></h3>
+    <div class="tf-buttons">
+      <button id="tf-true" class="btn-tf">VERDADEIRO</button>
+      <button id="tf-false" class="btn-tf">FALSO</button>
+    </div>
+    <div id="tf-feedback" class="hidden"></div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section id="equipe" class="section alt-bg">
+  <h2 class="section-title">Equipe responsável pelo projeto</h2>
+  <p class="section-intro">Conhecimento, criatividade e trabalho em equipe.</p>
+  <div class="team-grid">
+    <div class="glass-card team-card"><span class="team-icon">👨‍🔬</span><p>Diego</p></div>
+    <div class="glass-card team-card"><span class="team-icon">👨‍🔬</span><p>Iago</p></div>
+    <div class="glass-card team-card"><span class="team-icon">👨🏿‍🔬</span><p>Pedro Martins</p></div>
+    <div class="glass-card team-card"><span class="team-icon">👨‍🔬</span><p>Américo</p></div>
+    <div class="glass-card team-card"><span class="team-icon">👨‍🔬</span><p>Arthur Breno</p></div>
+    <div class="glass-card team-card"><span class="team-icon">👨‍🔬</span><p>Arthur</p></div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section id="final" class="section hero-section final-section">
+  <div class="ocean-layer"></div>
+  <div class="hero-content">
+    <h2 class="hero-title small">Obrigado por explorar o mundo dos peixes!</h2>
+    <p class="final-phrase">Os oceanos, rios e lagos escondem uma diversidade extraordinária. Conhecer os peixes é também compreender melhor os ecossistemas dos quais fazemos parte.</p>
+    <div class="final-buttons">
+      <button id="back-start-btn" class="btn-main">Voltar ao início</button>
+      <button id="redo-quiz-btn" class="btn-secondary">Refazer o quiz</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- MODAL -->
+<div id="modal-overlay" class="hidden">
+  <div id="modal-box">
+    <button id="modal-close">✕</button>
+    <h3 id="modal-title"></h3>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
